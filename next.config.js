@@ -1,6 +1,6 @@
 module.exports = {
     images: {
-        domains: ['next1.local'],
+        domains: ['dvorjanski.ee'],
     },
     typescript: {
         // !! WARN !!
