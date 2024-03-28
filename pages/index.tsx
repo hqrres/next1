@@ -26,7 +26,9 @@ export default function Home({posts}) {
 
 export async function getStaticProps(){
 
- const res = await fetch('http://next1.local/graphql', {
+ const wp_graphql = process.env.WP_GRAPHQL
+
+ const res = await fetch( wp_graphql, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({

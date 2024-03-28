@@ -18,7 +18,9 @@ export default function StarWars({data}){
 
 export async function getServerSideProps(context) {
 
-    const response = await fetch("https://swapi.dev/api/films")
+    const swapi_url = process.env.SWAPI
+
+    const response = await fetch(swapi_url)
     const data = await response.json();
 
     return { props: { data } }
