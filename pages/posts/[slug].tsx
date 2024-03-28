@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import { GetStaticPaths } from "next";
 
 import { getPosts, getPostBySlug } from "@/lib/service";
 
@@ -46,6 +47,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: { post },
   };
 };
+
+
+
+
 // import Image from 'next/image'
 
 
