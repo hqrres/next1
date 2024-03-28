@@ -1,6 +1,12 @@
 module.exports = {
     images: {
-        domains: ['dvorjanski.ee'],
+        //domains: ['dvorjanski.ee'],
+        remotePatterns: [
+            {
+              protocol: 'https',
+              hostname: 'dvorjanski.ee'
+            },
+        ]
     },
     typescript: {
         // !! WARN !!

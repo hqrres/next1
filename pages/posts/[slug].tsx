@@ -6,6 +6,7 @@ import { getPosts, getPostBySlug } from "@/lib/service";
 
 export default function PostDetails({ post }: { post: any }) {
   return (
+    <>
       <section className="container mx-auto py-12">
         <div
           className="post-header relative flex flex-col items-center justify-center w-full min-h-[200px] rounded-md"
@@ -29,6 +30,7 @@ export default function PostDetails({ post }: { post: any }) {
           dangerouslySetInnerHTML={{ __html: post.content }}
         ></div>
       </section>
+    </>
   );
 }
 

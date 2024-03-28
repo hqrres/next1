@@ -5,6 +5,7 @@ import defaultImage from "@/assets/images/default.jpg";
 
 
 export const PostBlock = ({ post }: { post: any }) => {
+
   return (
     <div className="post-block p-2 rounded-md">
       <Link href={`/posts/${post.slug}`}>
@@ -19,11 +20,11 @@ export const PostBlock = ({ post }: { post: any }) => {
       </Link>
       <Link href={`/posts/${post.slug}`} className="post-content my-4">
         <h3 className="text-2xl py-4">{post.title}</h3>
-        <div
+        {/* <div
           className="italic"
-          dangerouslySetInnerHTML={{ __html: post.excerpt }}
-        ></div>
+        >{post.excerpt}</div> */}
       </Link>
     </div>
   );
 };
+
