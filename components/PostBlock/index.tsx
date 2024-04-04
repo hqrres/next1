@@ -20,7 +20,7 @@ export const PostBlock = ({ post }: { post: any }) => {
       </Link>
       <Link href={`/posts/${post.slug}`} className="post-content my-4">
         <h3 className="text-2xl py-4">{post.title}</h3>
-        {/* <div
+        {/* // throws hydration error. maybe needs sanitizion <div
           className="italic"
         >{post.excerpt}</div> */}
       </Link>
