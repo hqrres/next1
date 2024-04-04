@@ -11,6 +11,7 @@ import { TorusGeometry } from 'three/src/geometries/TorusGeometry.js';
 
 extend({TorusGeometry})
 
+
 export const Hero = () => {
   return (
     <div className="w-full h-96 bg-black">
