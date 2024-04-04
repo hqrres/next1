@@ -73,7 +73,8 @@ function Cube() {
   return (
     <motion.mesh 
       ref={mesh} 
-      rotation-z={mouse.x}
+      rotation-z={mouse.x} 
+      // rotation-z={mouse.y}
       >
       <torusGeometry args={[10, 9.999, 100, 100]}/>
       <meshStandardMaterial color="gray" wireframe/>
