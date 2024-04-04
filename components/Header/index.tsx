@@ -4,22 +4,20 @@ export const Header = () => {
   return (
     <header className="container mx-auto">
       <div className="text-center border-t py-8">
-        <h3 className="text-xl">Important Links</h3>
         <div className="flex items-center justify-center my-4 underline">
-          <Link href="https://dev.to/jeffsalive" className="px-4">
-            Dev.to (Jeffrey)
+          <Link href="/" className="px-4">
+            Link 1
           </Link>
-          <Link href="https://twitter.com/JeffreySunny1" className="px-4">
-            Twitter
+          <Link href="/" className="px-4">
+            Link 2
           </Link>
-          <Link href="https://linkedin.com/in/jeffsalive" className="px-4">
-            LinkedIn
+          <Link href="#" className="px-4">
+            Link 3
           </Link>
-          <Link href="https://jeffreynwankwo.com" className="px-4">
-            Website
+          <Link href="#" className="px-4">
+            Link 4
           </Link>
         </div>
-        <small>Jeffrey &copy; {new Date().getFullYear()}</small>
       </div>
     </header>
   );

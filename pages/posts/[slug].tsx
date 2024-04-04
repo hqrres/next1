@@ -1,5 +1,7 @@
 import { GetStaticProps } from "next";
 import { GetStaticPaths } from "next";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 
 import { getPosts, getPostBySlug } from "@/lib/service";
@@ -7,6 +9,7 @@ import { getPosts, getPostBySlug } from "@/lib/service";
 export default function PostDetails({ post }: { post: any }) {
   return (
     <>
+      <Header />
       <section className="container mx-auto py-12">
         <div
           className="post-header relative flex flex-col items-center justify-center w-full min-h-[200px] rounded-md"
@@ -21,8 +24,7 @@ export default function PostDetails({ post }: { post: any }) {
             style={{ backgroundColor: "rgba(0, 0, 0, .5)" }}
           ></div>
           <div className="z-20 text-center">
-            <h1 className="text-2xl md:text-4xl mb-4">{post.title}</h1>
-            <p className="italic">By Jeffrey</p>
+            <h1 className="text-2xl md:text-4xl mb-4 text-white">{post.title}</h1>
           </div>
         </div>
         <div
@@ -30,6 +32,7 @@ export default function PostDetails({ post }: { post: any }) {
           dangerouslySetInnerHTML={{ __html: post.content }}
         ></div>
       </section>
+      <Footer />
     </>
   );
 }
