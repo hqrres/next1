@@ -1,21 +1,29 @@
 import Link from "next/link";
 
+import Image from "next/image";
+
+import defaultImage from "@/assets/images/logo_valge.svg";
+
+
 export const Header = () => {
   return (
     <header className="container mx-auto">
-      <div className="text-center border-t py-8">
-        <div className="flex items-center justify-center my-4 underline">
-          <Link href="/" className="px-4">
-            Link 1
+      <div className="text-center py-8">
+        <div className="flex justify-between my-4">
+          <Link href="../#projektid" className="px-4">
+            Tehtud
           </Link>
-          <Link href="/" className="px-4">
-            Link 2
+          <Link href="../" className="logo-wrap relative h-20">
+            <Image
+              src={defaultImage}
+              fill
+              alt={"logo"}
+              className="relative mb-2"
+            />
+            <div className="text-xl">veebiteed</div>
           </Link>
-          <Link href="#" className="px-4">
-            Link 3
-          </Link>
-          <Link href="#" className="px-4">
-            Link 4
+          <Link href="#kontakt" className="px-4">
+            Kontakt
           </Link>
         </div>
       </div>

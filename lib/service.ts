@@ -38,6 +38,16 @@ export async function getPostBySlug(slug: string) {
         }
         slug
         title
+        postAcf {
+          aadress
+          aeg
+          fieldGroupName
+          jagunebPeamiselt
+          kliendiSoov
+          midaOppisin
+          tehnilineInfo
+          vabadMotted
+        }
       }
     }`,
       {

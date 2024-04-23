@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Kodchasan';
+  src: url('/fonts/Kodchasan-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 
 h1 {
   font-size:40px
 }
@@ -12,4 +20,35 @@ h2 {
 
 h3 {
   font-size:24px
+} */
+
+body {
+  background-color: black;
+  background-image:url('/images/pexels-kaip-1341279.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(2px) brightness(40%);
+
+  color:#ffffff;
+  font-weight: 200;
+  font-family: 'Kodchasan';
+}
+
+.logo-wrap img {
+  position: relative !important;
+}
+
+.post-acf {
+  padding: 14px 20px 17px 20px;
+  border-color:#2C2C2C;
+}
+
+.post-acf .label {
+  color: #ABABAB;
+  font-size:14px;
+  padding-bottom:3px;
+}
+
+.post-inner img {
+  margin-top:12px;
 }

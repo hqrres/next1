@@ -2,9 +2,10 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="container mx-auto">
-      <div className="text-center border-t py-8">
-        <small>Year: {new Date().getFullYear()}</small>
+    <footer id="kontakt" className="container mx-auto pb-20 mt-40">
+      <div className="text-center py-8">
+        <a className="mx-auto my-2" href="mailto:elektrom@tutanota.com">elektrom@tutanota.com</a>
+        {/* <small>Aasta: {new Date().getFullYear()}</small> */}
       </div>
     </footer>
   );

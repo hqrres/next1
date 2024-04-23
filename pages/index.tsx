@@ -13,9 +13,9 @@ export default function HomePage({ posts }: { posts: any }) {
     <>
       <Header />
       <Hero />
-      <div className="container mx-auto py-8">
-        <h3 className="text-xl">All my posts ({posts.length})</h3>
-        <div className="my-6 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div id="projektid" className="container mx-auto py-10">
+        <h3 className="text-2xl text-center">Projektid ({posts.length})</h3>
+        <div className="my-6 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post: any) => {
             return <PostBlock key={post.slug} post={post} />;
           })}
