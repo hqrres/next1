@@ -19,7 +19,7 @@ export default function HomePage({ posts }: { posts: any }) {
           {posts.map((post: any) => {
             return <PostBlock key={post.slug} post={post} />;
           })}
-        </div>
+        </div> 
       </div>
       <Footer />
     </>
