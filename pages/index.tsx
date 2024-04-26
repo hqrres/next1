@@ -20,7 +20,7 @@ export default function HomePage({ posts }: { posts: any }) {
             return <PostBlock key={post.slug} post={post} />;
           })}
         </div>
-      </div> 
+      </div>
       <Footer />
     </>
   );
