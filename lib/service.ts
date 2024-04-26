@@ -41,9 +41,9 @@ export async function getPostBySlug(slug: string) {
         postAcf {
           aadress
           aeg
-          fieldGroupName
+          __typename
           jagunebPeamiselt
-          kliendiSoov
+          luhikirjeldus
           midaOppisin
           tehnilineInfo
           vabadMotted

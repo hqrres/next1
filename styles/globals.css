@@ -22,6 +22,7 @@ h3 {
   font-size:24px
 } */
 
+
 body {
   background-color: black;
   background-image:url('/images/pexels-kaip-1341279.jpg');
@@ -34,6 +35,14 @@ body {
   font-family: 'Kodchasan';
 }
 
+.container {
+    max-width: 1284px;
+}
+
+.container.post-inner {
+  max-width: 767px;
+}
+
 .logo-wrap img {
   position: relative !important;
 }
@@ -41,6 +50,12 @@ body {
 .post-acf {
   padding: 14px 20px 17px 20px;
   border-color:#2C2C2C;
+}
+
+@media(max-width: 767px) {
+  .post-acf {
+    padding: 14px 12px 17px 12px;
+  }
 }
 
 .post-acf .label {
