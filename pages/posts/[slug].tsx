@@ -124,7 +124,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const posts = await getPosts(100); // retrieve first 100 posts
 
   return {
-    paths: posts.map((post: any) => `/posts/${post.slug}`),
+    paths: posts.map((post: any) => `/projekt/${post.slug}`),
     fallback: false,
   };
 };
