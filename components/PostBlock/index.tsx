@@ -8,7 +8,7 @@ export const PostBlock = ({ post }: { post: any }) => {
 
   return (
     <div className="post-block p-2">
-      <Link href={`/posts/${post.slug}`}>
+      <Link href={`/projekt/${post.slug}`}>
         <div className="relative h-60 transition-all duration-200 ease-linear hover:-translate-y-[3px]">
           <Image
             src={post.featuredImage.node.sourceUrl ?? defaultImage}
