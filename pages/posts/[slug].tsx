@@ -44,12 +44,14 @@ export default function PostDetails({ post }: { post: any }) {
 
             <div className="flex flex-row">
               
+              {post.postAcf.aadress && (
               <div className={`post-acf post-project-address border-l-2 border-t-2 ${post.postAcf.aeg ? 'basis-2/3' : 'basis-full border-r-2'}`}>
                 <div className="label">aadress</div>
                 <a
                 href={post.postAcf.aadress} target='_blank' dangerouslySetInnerHTML={{ __html: post.postAcf.aadress }}>
                 </a>
               </div>
+              )}
 
               {post.postAcf.aeg && (
               <div className="basis-1/3 post-acf post-project-address border-x-2 border-t-2">
@@ -61,13 +63,15 @@ export default function PostDetails({ post }: { post: any }) {
               )}
               
             </div>
-
+            
+            {post.postAcf.luhikirjeldus && (
             <div className={`post-acf post-project-address border-x-2 border-t-2 ${!post.postAcf.tehnilineInfo ? 'border-b-2' : ''}`}>
               <div className="label">lühikirjeldus</div>
               <div
               dangerouslySetInnerHTML={{ __html: post.postAcf.luhikirjeldus }}>
               </div>
-            </div>
+            </div>        
+            )}
 
             {post.postAcf.tehnilineInfo && (
             <div className="post-acf post-project-address border-x-2 border-y-2 mb-4">

@@ -67,3 +67,7 @@ body {
 .post-inner img {
   margin-top:12px;
 }
+
+.post-inner video {
+  max-width:700px;
+}
