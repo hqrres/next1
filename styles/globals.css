@@ -68,6 +68,7 @@ body {
   margin-top:12px;
 }
 
-.post-inner video {
-  max-width:700px;
+.wp-video {
+  position: relative;
+  width: 100% !important;
 }
