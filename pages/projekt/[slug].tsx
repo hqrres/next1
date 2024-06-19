@@ -66,7 +66,7 @@ export default function PostDetails({ post }: { post: any }) {
             
             {post.postAcf.luhikirjeldus && (
             <div className={`post-acf post-project-address border-x-2 border-t-2 ${!post.postAcf.tehnilineInfo ? 'border-b-2' : ''}`}>
-              <div className="label">lühikirjeldus</div>
+              {/* <div className="label">lühikirjeldus</div> */}
               <div
               dangerouslySetInnerHTML={{ __html: post.postAcf.luhikirjeldus }}>
               </div>
