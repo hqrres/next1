@@ -24,7 +24,7 @@ h3 {
 
 
 body {
-  background-color: black;
+  /* background-color: black; */
   
   /* gradient
   background: rgb(2,0,36);
@@ -32,10 +32,10 @@ body {
   */
 
   /* blurry image */
-  background-image:url('/images/pexels-kaip-1341279.jpg');
+  /* background-image:url('/images/pexels-kaip-1341279.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  backdrop-filter: blur(6px) brightness(40%);
+  backdrop-filter: blur(6px) brightness(40%); */
   
 
   color:#ffffff;
@@ -82,7 +82,7 @@ body {
 } 
 
 
-/* ---- tsparticles container ---- */
+
 #tsparticles {
   position: absolute;
   width: 100%;
@@ -92,4 +92,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  z-index:-1;
+  opacity: 0.4;
 }

@@ -7,12 +7,13 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { PostBlock } from "@/components/PostBlock";
 import { getPosts } from "@/lib/service";
-import { Particl } from "@/components/Particl";
+import { Particle } from "@/components/Particle";
 
 export default function HomePage({ posts }: { posts: any }) {
+
   return (
     <>
-      <Particl />
+      <Particle />
       <Header />
       <Hero />
       <div id="projektid" className="container mx-auto py-10">
