@@ -67,7 +67,7 @@ export const Particle = () => {
             },
             move: {
                 enable: true,
-                speed: 0.2,
+                speed: 0.1,
                 direction: "none",
                 random: false,
                 straight: false,
