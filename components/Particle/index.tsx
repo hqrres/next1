@@ -44,7 +44,7 @@ export const Particle = () => {
                 }
             },
             color: {
-                value: ["#ffffff"]
+                value: ["#ffffff", '#cccccc', '#666666', '#333333']
             },
             shape: {
                 type: "circle",
@@ -91,7 +91,6 @@ export const Particle = () => {
     }),
     [],
   );
-  
   
 
   if (init) {
