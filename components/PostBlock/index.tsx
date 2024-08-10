@@ -6,7 +6,6 @@ import defaultImage from "@/assets/images/default.jpg";
 
 export const PostBlock = ({ post }: { post: any }) => {
 
-  
 
   return (
     <div className="post-block p-2">
