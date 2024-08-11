@@ -62,7 +62,7 @@ export default function PostDetails({ post }: { post: any }) {
                 <div
                 dangerouslySetInnerHTML={{ __html: post.postAcf.aeg }}>
                 </div>
-              </div>
+              </div> 
               )}
               
             </div>
