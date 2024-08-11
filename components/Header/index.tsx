@@ -11,7 +11,7 @@ export const Header = () => {
       <div className="text-center py-8">
         <div className="flex justify-between my-4">
           <Link href="../#projektid" className="px-4">
-            Tehtud
+            Works
           </Link>
           <Link href="../" className="logo-wrap relative h-20">
             <Image
@@ -23,7 +23,7 @@ export const Header = () => {
             <div className="text-xl">veebiteed</div>
           </Link>
           <Link href="#kontakt" className="px-4">
-            Kontakt
+            Contact
           </Link>
         </div>
       </div>

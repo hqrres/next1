@@ -4,6 +4,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
 
+import { Particle } from "@/components/Particle";
+
 
 import { getPosts, getPostBySlug } from "@/lib/service";
 
@@ -13,6 +15,7 @@ export default function PostDetails({ post }: { post: any }) {
 
   return (
     <>
+      <Particle />
       <Header />
       <section className="container mx-auto py-12">
         <div
@@ -40,13 +43,13 @@ export default function PostDetails({ post }: { post: any }) {
             className="post-content w-full md:w-3/5 mx-auto mt-20 py-6 text-lg"
             dangerouslySetInnerHTML={{ __html: post.content }}
             ></div> */}
-            <h2 className="post-acf border-x-2 border-t-2 text-2xl">Ülevaade</h2>
+            <h2 className="post-acf border-x-2 border-t-2 text-2xl">Overview</h2>
 
             <div className="flex flex-row">
               
               {post.postAcf.aadress && (
               <div className={`post-acf post-project-address border-l-2 border-t-2 ${post.postAcf.aeg ? 'basis-2/3' : 'basis-full border-r-2'}`}>
-                <div className="label">aadress</div>
+                <div className="label">address</div>
                 <a
                 href={post.postAcf.aadress} target='_blank' dangerouslySetInnerHTML={{ __html: post.postAcf.aadress }}>
                 </a>
@@ -55,7 +58,7 @@ export default function PostDetails({ post }: { post: any }) {
 
               {post.postAcf.aeg && (
               <div className="basis-1/3 post-acf post-project-address border-x-2 border-t-2">
-                <div className="label">tööaeg</div>
+                <div className="label">time</div>
                 <div
                 dangerouslySetInnerHTML={{ __html: post.postAcf.aeg }}>
                 </div>
@@ -75,7 +78,7 @@ export default function PostDetails({ post }: { post: any }) {
 
             {post.postAcf.tehnilineInfo && (
             <div className="post-acf post-project-address border-x-2 border-y-2 mb-4">
-              <div className="label">tehniline info</div>
+              <div className="label">technical info</div>
               <div
               dangerouslySetInnerHTML={{ __html: post.postAcf.tehnilineInfo }}>
               </div>
@@ -88,7 +91,7 @@ export default function PostDetails({ post }: { post: any }) {
 
             {post.postAcf.jagunebPeamiselt && (
             <div className="post-acf post-project-address border-x-2 border-t-2">
-              <div className="label">jaguneb peamiselt</div>
+              <div className="label">divided into</div>
               <div
               dangerouslySetInnerHTML={{ __html: post.postAcf.jagunebPeamiselt }}>
               </div>
@@ -97,7 +100,7 @@ export default function PostDetails({ post }: { post: any }) {
 
             {post.postAcf.midaOppisin && (
             <div className="post-acf post-project-address border-x-2 border-t-2">
-              <div className="label">mida õppisin</div>
+              <div className="label">learned</div>
               <div
               dangerouslySetInnerHTML={{ __html: post.postAcf.midaOppisin }}>
               </div>
@@ -106,7 +109,7 @@ export default function PostDetails({ post }: { post: any }) {
 
             {post.postAcf.vabadMotted && (
             <div className="post-acf post-project-address border-x-2 border-y-2">
-              <div className="label">vabad mõtted</div>
+              <div className="label">free</div>
               <div
               dangerouslySetInnerHTML={{ __html: post.postAcf.vabadMotted }}>
               </div>

@@ -17,7 +17,7 @@ export default function HomePage({ posts }: { posts: any }) {
       <Header />
       <Hero />
       <div id="projektid" className="container mx-auto py-10">
-        <h3 className="text-2xl text-center">Projektid</h3> 
+        <h3 className="text-2xl text-center">Projects</h3> 
         {/* ({posts.length}) */}
         <div className="my-6 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post: any) => {
