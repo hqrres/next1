@@ -34,6 +34,15 @@ export default function PostDetails({ post }: { post: any }) {
           <div className="z-20 text-center">
             <h1 className="text-2xl md:text-4xl mb-4 text-white drop-shadow-xl">{post.title}</h1>
           </div>
+
+          {post.tags.nodes && (
+            <ul className="tags flex flex-row flex-wrap justify-center gap-x-[5px] gap-y-[3px] m-[0px_2px_3px_2px]">
+              {post.tags.nodes.map((tag, index) => (
+                  <li key={index} className="p-[2px_5px] border border-[#444] rounded-[7px] text-[14px] text-[#999]">{tag.name}</li>
+              ))}
+            </ul>
+          )}
+          
         </div>
       </section>
 
@@ -48,7 +57,10 @@ export default function PostDetails({ post }: { post: any }) {
             <div className="flex flex-row">
               
               {post.postAcf.aadress && (
-              <div className={`post-acf post-project-address border-l-2 border-t-2 ${post.postAcf.aeg ? 'basis-2/3' : 'basis-full border-r-2'}`}>
+              <div className={`post-acf post-project-address border-l-2 border-t-2
+                ${post.postAcf.aeg ? 'basis-2/3' : 'basis-full border-r-2'} 
+                ${post.postAcf.luhikirjeldus || post.postAcf.tehnilineInfo || post.postAcf.midaOppisin || post.postAcf.vabadMotted ? '' : 'border-b-2'}
+                `}>
                 <div className="label">address</div>
                 <a
                 href={post.postAcf.aadress} target='_blank' dangerouslySetInnerHTML={{ __html: post.postAcf.aadress }}>

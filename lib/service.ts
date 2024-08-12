@@ -12,7 +12,12 @@ export async function getPosts(first = 10) {
               }
             }
             slug
-            title
+            title      
+            tags {
+              nodes {
+                name
+              }
+            }
           }
         }
       }`,
@@ -47,6 +52,11 @@ export async function getPostBySlug(slug: string) {
           midaOppisin
           tehnilineInfo
           vabadMotted
+        }
+        tags {
+          nodes {
+            name
+          }
         }
       }
     }`,

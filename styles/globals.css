@@ -81,8 +81,7 @@ body {
   width: 100% !important;
 } 
 
-
-
+/* particles */
 #tsparticles {
   position: absolute;
   width: 100%;
