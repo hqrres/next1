@@ -2,7 +2,10 @@ import { GetStaticProps } from "next";
 import { GetStaticPaths } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+// import { ImageGallery } from "@/components/ImageGallery";
 // import Image from "next/image";
+import { useState } from "react";
+
 
 import { Particle } from "@/components/Particle";
 
@@ -12,6 +15,29 @@ import { getPosts, getPostBySlug } from "@/lib/service";
 export default function PostDetails({ post }: { post: any }) {
 
   //console.log(post);
+  const [imageToShow, setImageToShow] = useState("");
+  const [lightboxDisplay, setLightBoxDisplay] = useState(false);
+  
+  // Getting the image from the post, or using the default image
+  const image = post?.featuredImage?.node?.sourceUrl ?? defaultImage;
+
+  // Function to show a specific image in the lightbox and make lightbox visible
+  const showImage = (image) => {
+    setImageToShow(image);
+    setLightBoxDisplay(true);
+  };
+
+  // Hide lightbox
+  const hideLightBox = () => {
+    setLightBoxDisplay(false);
+  };
+
+  // Creating the image card with the click handler
+  const imageCard = (
+      <img className="image-card" onClick={() => showImage(image)} src={image} />
+  );
+
+
 
   return (
     <>
@@ -31,10 +57,10 @@ export default function PostDetails({ post }: { post: any }) {
             className="absolute w-full h-full z-10 backdrop-blur-md"
             style={{ backgroundColor: "rgba(0, 0, 0, .1)" }}
           ></div> */}
-          <div className="z-20 text-center">
+          <div className="text-center">
             <h1 className="text-2xl md:text-4xl mb-4 text-white drop-shadow-xl">{post.title}</h1>
           </div>
-
+          
           {post.tags.nodes && (
             <ul className="tags flex flex-row flex-wrap justify-center gap-x-[5px] gap-y-[3px] m-[0px_2px_3px_2px]">
               {post.tags.nodes.map((tag, index) => (
@@ -47,19 +73,24 @@ export default function PostDetails({ post }: { post: any }) {
       </section>
 
       <section className="container post-inner m-auto max-w-2xl p-2">
-        <div>
-            {/* <div
-            className="post-content w-full md:w-3/5 mx-auto mt-20 py-6 text-lg"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-            ></div> */}
+        <div>            
             <h2 className="post-acf border-x-2 border-t-2 text-2xl">Overview</h2>
-
+            
+            {/* <div
+            className="relative flex flex-col items-center justify-center w-full min-h-[100px]"
+            style={{
+              backgroundImage: `url(${post.featuredImage.node.sourceUrl})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div> */}
+            
             <div className="flex flex-row">
               
               {post.postAcf.aadress && (
               <div className={`post-acf post-project-address border-l-2 border-t-2
                 ${post.postAcf.aeg ? 'basis-2/3' : 'basis-full border-r-2'} 
-                ${post.postAcf.luhikirjeldus || post.postAcf.tehnilineInfo || post.postAcf.midaOppisin || post.postAcf.vabadMotted ? '' : 'border-b-2'}
+                ${post.postAcf.luhikirjeldus || post.postAcf.tehnilineInfo || post.postAcf.midaOppisin || post.postAcf.vabadMotted || image ? '' : 'border-b-2'}
                 `}>
                 <div className="label">address</div>
                 <a
@@ -78,6 +109,17 @@ export default function PostDetails({ post }: { post: any }) {
               )}
               
             </div>
+
+            {image && (
+            <div className={`post-acf featured-image border-t-2 border-l-2 border-r-2 ${!post.postAcf.tehnilineInfo ? 'border-b-2' : ''}`}>
+              <div>{imageCard}</div>      
+              {lightboxDisplay && (
+                <div id="lightbox" onClick={hideLightBox}>
+                  <img id="lightbox-img" src={imageToShow}></img>
+                </div>
+              )}
+            </div>  
+            )}
             
             {post.postAcf.luhikirjeldus && (
             <div className={`post-acf post-project-address border-x-2 border-t-2 ${!post.postAcf.tehnilineInfo ? 'border-b-2' : ''}`}>

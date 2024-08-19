@@ -46,7 +46,7 @@ export const Particle = () => {
                 }
             },
             color: {
-                value: ["#ffffff", '#cccccc', '#666666', '#333333']
+                value: ['#ffffff', '#333333', '#777777']
             },
             shape: {
                 type: "circle",
@@ -64,7 +64,7 @@ export const Particle = () => {
                 }
             },
             size: {
-                value: 1,
+                value: 0.8,
                 random: true,
             },
             move: {
