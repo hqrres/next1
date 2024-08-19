@@ -107,12 +107,12 @@ export default function PostDetails({ post }: { post: any }) {
                 </div>
               </div> 
               )}
-              
+            
             </div>
 
             {image && (
-            <div className={`post-acf featured-image border-t-2 border-l-2 border-r-2 ${!post.postAcf.tehnilineInfo ? 'border-b-2' : ''}`}>
-              <div>{imageCard}</div>      
+            <div className={`post-acf featured-image border-t-2 border-l-2 border-r-2 ${!post.postAcf.tehnilineInfo && !post.postAcf.luhikirjeldus && !post.postAcf.luhikirjeldus && !post.postAcf.jagunebPeamiselt && !post.postAcf.midaOppisin && !post.postAcf.vabadMotted ? 'border-b-2' : ''}`}>
+              <div>{imageCard}</div>
               {lightboxDisplay && (
                 <div id="lightbox" onClick={hideLightBox}>
                   <img id="lightbox-img" src={imageToShow}></img>

@@ -43,6 +43,10 @@ body {
   font-family: 'Kodchasan';
 }
 
+p {
+  margin-bottom: 14px;
+}
+
 .container {
     max-width: 1284px;
 }
