@@ -26,7 +26,7 @@ export const Footer = () => {
 		<footer id="kontakt" className="container mx-auto pb-20 mt-40">
 			<div className="text-center py-8 flex justify-center">
 				
-				<form action={sendEmailAction}>
+				{/* <form action={sendEmailAction}>
 					<label htmlFor="name">Name</label>
 					<input type="text" id="name" name="name" />
 					<label htmlFor="email">Email</label>
@@ -34,7 +34,7 @@ export const Footer = () => {
 					<label htmlFor="message">Message</label>
 					<textarea name="message" id="message" cols={30} rows={10}></textarea>
 					<button type="submit">Send</button>
-				</form>
+				</form> */}
 
 
 				{/* <form className='max-w-4xl border-gray-800 border-2 p-10'>
