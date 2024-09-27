@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const Footer = () => {
- 
+
 	return (
 		<footer id="kontakt" className="container mx-auto pb-20 mt-20 mb-20">
 			<div className="text-center py-40 justify-center">
