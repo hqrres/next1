@@ -15,7 +15,7 @@ export const Particle = () => {
 
   // this should be run only once per application lifetime
   useEffect(() => {
-    console.log("Particle component mounted");
+    // console.log("Particle component mounted");
     initParticlesEngine(async (engine) => {
       // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
       // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -31,7 +31,7 @@ export const Particle = () => {
 
 
   const particlesLoaded = (container: any) => {
-    console.log(container);
+    // console.log(container);
   };
 
   const options = useMemo(

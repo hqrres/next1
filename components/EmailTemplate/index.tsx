@@ -1,21 +1,28 @@
-import { Html, Heading, Text } from "@react-email/components"
-const EmailTemplate = ({
-  name,
-  email,
-  message
-}: {
-  name: string
-  email: string
-  message: string
-}) => {
-  return (
-    <Html lang="en">
-      <Heading as="h1">New Form Submission</Heading>
-      <Text>You just submitted a form. Here are the details:</Text>
-      <Text>Name: {name}</Text>
-      <Text>Email: {email}</Text>
-      <Text>Message: {message}</Text>
-    </Html>
-  )
+import * as React from 'react';
+
+interface EmailTemplateProps {
+  firstName: string;
 }
-export default EmailTemplate
+
+export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
+  firstName,
+}) => (
+  <div>
+    <h1>Welcome, {firstName}!</h1>
+  </div>
+);
+
+
+
+// before 27 sept
+// "use client"
+// // import { Resend } from 'resend';
+// import { sendEmail } from '@/pages/api/actions';
+
+// export default async function Page() {
+//   return (
+//     <form action={sendEmail}>
+//       <button type="submit">Send email</button>
+//     </form>
+//   )
+// }
