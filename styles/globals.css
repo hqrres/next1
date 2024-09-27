@@ -61,7 +61,7 @@ p {
 
 .post-acf {
   padding: 14px 20px 17px 20px;
-  border-color:#2C2C2C;
+  border-color:  rgb(30 41 59); /* #2C2C2C */
 }
 
 @media(max-width: 767px) {
@@ -71,7 +71,7 @@ p {
 }
 
 .post-acf .label {
-  color: #ABABAB;
+  color: rgb(100 116 139); /* #ABABAB */
   font-size:14px;
   padding-bottom:3px;
 }

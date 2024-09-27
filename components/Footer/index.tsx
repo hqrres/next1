@@ -1,13 +1,14 @@
 import React from 'react'
-import { EmailTemplate } from "@/components/EmailTemplate";
+// import { EmailTemplate } from "@/components/EmailTemplate";
+import Link from 'next/link';
 
 export const Footer = () => {
 
 	return (
 		<footer id="kontakt" className="container mx-auto pb-20 mt-40">
-			<div className="text-center py-8 flex justify-center">
+			<div className="text-center py-8  justify-center">
 				
-				<EmailTemplate firstName={''} />
+				{/* <EmailTemplate firstName={''} /> */}
 
 
 				{/* <form className='max-w-4xl border-gray-800 border-2 p-10'>
@@ -30,6 +31,8 @@ export const Footer = () => {
 				</div> */}
 				{/* {successMessage && <p>{successMessage}</p>} */}
 				{/* </form> */}
+				<div className='text-xl pb-6 text-slate-500'>Email:</div>
+				<a href="mailto:electrom@tutanota.com" className='p-[6px_16px_8px_16px] text-4xl text-[#fff]'>elektrom@tutanota.com</a>
 
 			</div>
 		</footer>

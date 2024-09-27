@@ -18,7 +18,7 @@ export default function HomePage({ posts }: { posts: any }) {
       <Hero />
       <div id="projektid" className="container mx-auto py-10">
         <Link href="../#projektid" className="px-4">
-          <h3 className="text-2xl text-center">Projects</h3> 
+          <h3 className="text-3xl text-center">Projects</h3> 
         </Link>
         {/* ({posts.length}) */}
         <div className="my-12 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

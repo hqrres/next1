@@ -64,7 +64,7 @@ export default function PostDetails({ post }: { post: any }) {
           {post.tags.nodes && (
             <ul className="tags flex flex-row flex-wrap justify-center gap-x-[5px] gap-y-[3px] m-[0px_2px_3px_2px]">
               {post.tags.nodes.map((tag, index) => (
-                  <li key={index} className="p-[2px_5px] border border-[#444] rounded-[7px] text-[14px] text-[#999]">{tag.name}</li>
+                  <li key={index} className="p-[2px_5px] border border-slate-800 rounded-[3x] text-[14px] text-slate-500">{tag.name}</li>
               ))}
             </ul>
           )}

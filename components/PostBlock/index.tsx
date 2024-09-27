@@ -10,8 +10,6 @@ import defaultImage from "@/assets/images/default.jpg";
 
 export const PostBlock = ({ post }: { post: any }) => {
 
-  // console.log(post);
-
   return (
     <div className="post-block p-2 mb-4">
       <Link href={`/projekt/${post.slug}`}>
@@ -20,7 +18,7 @@ export const PostBlock = ({ post }: { post: any }) => {
             src={post?.featuredImage?.node?.sourceUrl ?? defaultImage}
             fill
             alt={post.title}
-            className="absolute rounded-md h-full w-full object-cover border-2 border-gray-800"
+            className="absolute rounded-md h-full w-full object-cover border-2 border-slate-800"
           />
         </div>
       </Link>
@@ -34,7 +32,7 @@ export const PostBlock = ({ post }: { post: any }) => {
       {post.tags.nodes && (
         <ul className="tags flex flex-row flex-wrap justify-center gap-x-[5px] gap-y-[3px] m-[0px_2px_3px_2px]">
           {post.tags.nodes.map((tag, index) => (
-              <li key={index} className="p-[2px_5px] border border-[#444] rounded-[7px] text-[14px] text-[#999]">{tag.name}</li>
+              <li key={index} className="p-[2px_5px] border border-slate-800 rounded-[3px] text-[14px] text-slate-500">{tag.name}</li>
           ))}
         </ul>
       )}
