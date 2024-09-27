@@ -1,6 +1,6 @@
 import React from 'react'
 // import { EmailTemplate } from "@/components/EmailTemplate";
-import Link from 'next/link';
+// import Link from 'next/link';
 
 export const Footer = () => {
 
