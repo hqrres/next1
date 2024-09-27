@@ -1,6 +1,4 @@
 import React from 'react'
-// import { EmailTemplate } from "@/components/EmailTemplate";
-// import Link from 'next/link';
 
 export const Footer = () => {
 
@@ -8,8 +6,6 @@ export const Footer = () => {
 		<footer id="kontakt" className="container mx-auto pb-20 mt-40">
 			<div className="text-center py-8  justify-center">
 				
-				{/* <EmailTemplate firstName={''} /> */}
-
 
 				{/* <form className='max-w-4xl border-gray-800 border-2 p-10'>
 				<label className='block'>
@@ -31,7 +27,7 @@ export const Footer = () => {
 				</div> */}
 				{/* {successMessage && <p>{successMessage}</p>} */}
 				{/* </form> */}
-				<div className='text-xl pb-6 text-slate-500'>Email:</div>
+				<div className='text-xl pb-6 text-slate-500'>Open to communicate:</div>
 				<a href="mailto:electrom@tutanota.com" className='p-[6px_16px_8px_16px] text-4xl text-[#fff]'>elektrom@tutanota.com</a>
 
 			</div>
