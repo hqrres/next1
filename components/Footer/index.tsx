@@ -26,9 +26,8 @@ export const Footer = () => {
 				</div> */}
 				{/* {successMessage && <p>{successMessage}</p>} */}
 				{/* </form> */}
-				<div className='text-xl pb-6 text-slate-500'>Open to communicate:</div>
+				<div className='text-xl pb-6 text-slate-500'>You can email me about business or philosophy here:</div>
 				<a href="mailto:electrom@tutanota.com" className='p-[6px_16px_8px_16px] text-4xl text-[#fff]'>elektrom@tutanota.com</a>
-
 			</div>
 		</footer>
 	);
