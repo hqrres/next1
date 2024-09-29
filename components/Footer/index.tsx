@@ -1,5 +1,5 @@
 import React from 'react'
-import { EmailTemplate } from '@/components/EmailTemplate';
+import { Contact } from '@/components/Contact';
 
 export const Footer = () => {
 
@@ -7,8 +7,8 @@ export const Footer = () => {
 		<footer id="kontakt" className="container mx-auto pb-20 mt-20 mb-20">
 			<div className="text-center py-40 justify-center">
 				
-				<EmailTemplate firstName={''} />
-				
+				<Contact />
+
 				{/* <form className='max-w-4xl border-gray-800 border-2 p-10'>
 				<label className='block'>
 					<span className="py-3 px-2 block text-start">Name</span>
