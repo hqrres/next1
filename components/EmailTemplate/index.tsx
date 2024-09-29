@@ -32,6 +32,7 @@ export const EmailTemplate = ({ message, email }: ContactEmailProps) => {
     },
   };
 
+  
   return (
     <Html>
       <Head />

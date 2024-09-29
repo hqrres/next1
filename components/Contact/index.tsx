@@ -38,8 +38,8 @@ export const Contact = () => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              email: formData.email,
-              message: formData.message,
+              email: 'formData.email',
+              message: 'formData.message',
             }),
           });
     
