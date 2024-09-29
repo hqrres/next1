@@ -1,58 +1,20 @@
-import * as React from "react";
-import {
-  Body,
-  Container,
-  Head,
-  Hr,
-  Html,
-  Preview,
-  Text,
-} from "@react-email/components";
-import { ContactEmailProps } from "@/components/Contact";
+import * as React from 'react';
+import { Html, Head, Body, Container, Text, Preview } from '@react-email/components';
 
-export const EmailTemplate = ({ message, email }: ContactEmailProps) => {
-  const containerStyle = {
-    margin: "0 auto",
-    padding: "0 1.25rem",
-    marginTop: "1.25rem",
-    marginBottom: "3rem",
-  };
+interface EmailTemplateProps {
+  email: string;
+  message: string;
+}
 
-  const hrStyle = {
-    marginTop: "0.625rem",
-    marginBottom: "1.875rem",
-    border: "1px solid #ccc",
-  };
-
-  const textStyle = {
-    base: {
-      fontSize: "1rem",
-      marginTop: "0",
-      marginBottom: "0.625rem",
-    },
-  };
-
-  
+export const EmailTemplate = ({ email, message }: EmailTemplateProps) => {
   return (
     <Html>
       <Head />
-      <Preview>Portfolio Message</Preview>
-      <Body style={{ fontFamily: "sans-serif", background: "#fff" }}>
-        <Container style={containerStyle}>
-          <Hr style={hrStyle} />
-
-          <Text style={textStyle.base}>
-            From: <i>{email}</i>,
-          </Text>
-          <Text style={textStyle.base}>{message}</Text>
-          <Text style={textStyle.base}>
-            Sent via Contact Form @{" "}
-            <a rel="noopener" href="https://eimaam.dev" target="_blank">
-              eimaam.dev
-            </a>
-            <br />
-          </Text>
-          <Hr style={hrStyle} />
+      <Preview>Welcome Email</Preview>
+      <Body style={{ fontFamily: 'sans-serif', background: '#f5f5f5' }}>
+        <Container>
+          {/* <Text>Saatja: {email}</Text> */}
+          <Text>Sõnum: {message}</Text>
         </Container>
       </Body>
     </Html>
