@@ -47,7 +47,7 @@ export default function ContactForm() {
           <input
             className="p-2 bg-transparent border-2 border-slate-500 w-64 text-xl my-4 active:bg-black"
             name="email"
-            placeholder="email"
+            placeholder="Your email"
             value={formData.email}
             onChange={handleChange}
             required
@@ -57,7 +57,7 @@ export default function ContactForm() {
           <textarea
             className="text-white p-2 bg-transparent border-2 border-slate-500 w-96 text-lg"
             name="message"
-            placeholder="message"
+            placeholder="Message"
             value={formData.message}
             onChange={handleChange}
             required
