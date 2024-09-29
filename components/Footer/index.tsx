@@ -1,10 +1,13 @@
 import React from 'react'
+import { EmailTemplate } from '@/components/EmailTemplate';
 
 export const Footer = () => {
 
 	return (
 		<footer id="kontakt" className="container mx-auto pb-20 mt-20 mb-20">
 			<div className="text-center py-40 justify-center">
+				
+				<EmailTemplate firstName={''} />
 				
 				{/* <form className='max-w-4xl border-gray-800 border-2 p-10'>
 				<label className='block'>
@@ -26,7 +29,7 @@ export const Footer = () => {
 				</div> */}
 				{/* {successMessage && <p>{successMessage}</p>} */}
 				{/* </form> */}
-				
+
 				<div className='text-xl pb-6 text-slate-500'>You can email me about business or philosophy here:</div>
 				<a href="mailto:electrom@tutanota.com" className='p-[6px_16px_8px_16px] text-4xl text-[#fff]'>elektrom@tutanota.com</a>
 			</div>
