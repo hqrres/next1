@@ -1,5 +1,3 @@
-
-
 export const Hero = () => {
   return (
     <div className="text-center py-40">
