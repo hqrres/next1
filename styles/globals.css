@@ -82,7 +82,7 @@ p {
 
 .image-card {
   width: fit-content;
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 #lightbox-img {
