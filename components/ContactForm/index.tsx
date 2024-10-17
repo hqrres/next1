@@ -43,21 +43,21 @@ export default function ContactForm() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="px-2.5">
           <input
-            className="p-2 bg-transparent border-2 border-slate-500 w-64 text-xl my-4 active:bg-black"
+            className="max-w-96 w-full p-2 bg-transparent border-2 border-slate-500 text-lg my-4 active:bg-black text-center"
             name="email"
-            placeholder="your email"
+            placeholder="your email where I will write back"
             value={formData.email}
             onChange={handleChange}
             required
           />
         </div>
-        <div>
+        <div className="px-2.5">
           <textarea
-            className="text-white p-2 bg-transparent border-2 border-slate-500 max-w-96 text-lg"
+            className="max-w-96 w-full text-white p-2 bg-transparent border-2 border-slate-500 text-lg text-center"
             name="message"
-            placeholder="message"
+            placeholder="content"
             value={formData.message}
             onChange={handleChange}
             required
