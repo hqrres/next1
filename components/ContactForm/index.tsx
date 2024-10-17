@@ -55,7 +55,7 @@ export default function ContactForm() {
         </div>
         <div>
           <textarea
-            className="text-white p-2 bg-transparent border-2 border-slate-500 w-96 text-lg"
+            className="text-white p-2 bg-transparent border-2 border-slate-500 max-w-96 text-lg"
             name="message"
             placeholder="message"
             value={formData.message}
