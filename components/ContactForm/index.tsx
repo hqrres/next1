@@ -45,7 +45,7 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit}>
         <div className="px-2.5">
           <input
-            className="max-w-96 w-full p-2 bg-transparent border-2 border-slate-500 text-lg my-4 active:bg-black text-center"
+            className="max-w-96 w-full bg-transparent p-2 border-2 border-slate-500 text-lg my-4 active:bg-black text-center"
             name="email"
             placeholder="your email where I will write back"
             value={formData.email}
