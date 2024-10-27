@@ -57,7 +57,7 @@ export default function ContactForm() {
           <textarea
             className="max-w-96 w-full text-white p-2 bg-transparent border-2 border-slate-500 text-lg text-center"
             name="message"
-            placeholder="content"
+            placeholder="what is your request?"
             value={formData.message}
             onChange={handleChange}
             required
