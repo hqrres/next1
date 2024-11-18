@@ -44,7 +44,6 @@ export default function PostDetails({ post }: { post: any }) {
   );
 
 
-
   return (
     <>
       <Particle />
