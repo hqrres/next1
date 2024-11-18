@@ -1,14 +1,25 @@
-
 import { GetStaticProps } from "next";
 import { GetStaticPaths } from "next";
 import { getPosts, getPostBySlug } from "@/lib/service";
 
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from 'next/router';
 
 import defaultImage from "@/assets/images/default.jpg";
 
 export const PostBlock = ({ post }: { post: any }) => {
+  const router = useRouter();
+
+  const handleTagClick = (tagName: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    router.push({
+      pathname: '/',
+      query: { tag: tagName },
+      hash: 'projektid'
+    }, undefined, { shallow: true });
+  };
 
   return (
     <div className="post-block p-2 mb-4">
@@ -32,7 +43,13 @@ export const PostBlock = ({ post }: { post: any }) => {
       {post.tags.nodes && (
         <ul className="tags flex flex-row flex-wrap justify-center gap-x-[5px] gap-y-[3px] m-[0px_2px_3px_2px]">
           {post.tags.nodes.map((tag, index) => (
-              <li key={index} className="p-[2px_5px] border border-slate-800 rounded-[3px] text-[14px] text-slate-500">{tag.name}</li>
+            <li 
+              key={index} 
+              onClick={(e) => handleTagClick(tag.name, e)}
+              className="p-[2px_5px] border border-slate-800 rounded-[3px] text-[14px] text-slate-500 cursor-pointer hover:bg-slate-800 hover:text-white transition-colors"
+            >
+              {tag.name}
+            </li>
           ))}
         </ul>
       )}

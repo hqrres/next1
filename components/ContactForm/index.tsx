@@ -15,7 +15,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevents the default form submit behavior (GET request)
-
+    
     try {
       const response = await fetch('/api/contact', {
         method: 'POST', // Ensure the method is POST

@@ -5,14 +5,22 @@ import { Footer } from "@/components/Footer";
 // import { ImageGallery } from "@/components/ImageGallery";
 // import Image from "next/image";
 import { useState } from "react";
-
+import { useRouter } from 'next/router';
 
 import { Particle } from "@/components/Particle";
-
 
 import { getPosts, getPostBySlug } from "@/lib/service";
 
 export default function PostDetails({ post }: { post: any }) {
+  const router = useRouter();
+
+  const handleTagClick = (tagName: string) => {
+    router.push({
+      pathname: '/',
+      query: { tag: tagName },
+      hash: 'projektid'
+    });
+  };
 
   //console.log(post);
   const [imageToShow, setImageToShow] = useState("");
@@ -46,17 +54,7 @@ export default function PostDetails({ post }: { post: any }) {
       <section className="container mx-auto py-12">
         <div
           className="post-header relative flex flex-col items-center justify-center w-full min-h-[100px]"
-          // style={{
-          //   backgroundImage: `url(${post.featuredImage.node.sourceUrl})`,
-          //   backgroundSize: "cover",
-          //   backgroundPosition: "center",
-          // }}
-        >
-      
-          {/* <div
-            className="absolute w-full h-full z-10 backdrop-blur-md"
-            style={{ backgroundColor: "rgba(0, 0, 0, .1)" }}
-          ></div> */}
+          >
           <div className="text-center">
             <h1 className="text-2xl md:text-4xl mb-4 text-white drop-shadow-xl">{post.title}</h1>
           </div>
@@ -64,7 +62,13 @@ export default function PostDetails({ post }: { post: any }) {
           {post.tags.nodes && (
             <ul className="tags flex flex-row flex-wrap justify-center gap-x-[5px] gap-y-[3px] m-[0px_2px_3px_2px]">
               {post.tags.nodes.map((tag, index) => (
-                  <li key={index} className="p-[2px_5px] border border-slate-800 rounded-[3x] text-[14px] text-slate-500">{tag.name}</li>
+                <li 
+                  key={index}
+                  onClick={() => handleTagClick(tag.name)}
+                  className="p-[2px_5px] border border-slate-800 rounded-[3px] text-[14px] text-slate-500 cursor-pointer hover:bg-slate-800 hover:text-white transition-colors"
+                >
+                  {tag.name}
+                </li>
               ))}
             </ul>
           )}
@@ -194,96 +198,3 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-
-
-
-// import Image from 'next/image'
-
-
-// export default function Post( data ) {
-
-//     console.log({data})
-
-//     const post = data.post;
-
-//     return (
-//         <div>
-//             <h1>{post.title}</h1>
-//             <Image width="140" height="126" src={post.featuredImage.node.sourceUrl} alt=""/>
-//             <article dangerouslySetInnerHTML={{__html: post.content}}></article>
-//         </div>        
-//     )
-
-// }
-
-// export async function getStaticProps(context) {
-
-//     const res = await fetch('http://next1.local/graphql', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({
-//             query: `
-//                 query SinglePost($id: ID!, $idType: PostIdType!) {
-//                 post(id: $id, idType: $idType) {
-//                         title
-//                         slug
-//                         content
-//                         featuredImage {
-//                             node {
-//                                 sourceUrl
-//                             }
-//                         }
-//                     }
-//                 }
-//             `,
-//             variables: {
-//                 id: context.params.slug,
-//                 idType: 'SLUG'
-//             }
-//         }) 
-//     })
-
-//     const json = await res.json()
-
-//     return {
-//         props: {
-//             post: json.data.post,
-//         }
-//     }
-
-// }
-
-// export async function getStaticPaths() {
-
-//     const res = await fetch('http://next1.local/graphql', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({
-//             query: `
-//                 query AllPostsQuery {
-//                     posts {
-//                         nodes {
-//                             slug
-//                             content
-//                             title
-//                             featuredImage {
-//                                 node {
-//                                     sourceUrl
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 }
-//             `
-//         })
-//     })
-
-//     const json = await res.json()
-//     const posts = json.data.posts.nodes;
-
-//     const paths = posts.map((post) => ({
-//         params: { slug: post.slug },
-//     }))
-
-//     return { paths, fallback: false }
-// }
