@@ -77,15 +77,6 @@ export default function PostDetails({ post }: { post: any }) {
         <div>            
             <h2 className="post-acf border-x-2 border-t-2 text-2xl">Overview</h2>
             
-            {/* <div
-            className="relative flex flex-col items-center justify-center w-full min-h-[100px]"
-            style={{
-              backgroundImage: `url(${post.featuredImage.node.sourceUrl})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          ></div> */}
-            
             <div className="flex flex-row">
               
               {post.postAcf.aadress && (
