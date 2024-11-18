@@ -34,7 +34,6 @@ export default function PostDetails({ post }: { post: any }) {
     setLightBoxDisplay(true);
   };
 
-  // Hide lightbox
   const hideLightBox = () => {
     setLightBoxDisplay(false);
   };

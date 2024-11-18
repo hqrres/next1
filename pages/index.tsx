@@ -120,10 +120,21 @@ export default function HomePage({ posts }: { posts: any }) {
           </AnimatePresence>
         </div>
 
-        <div className="my-12 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {filteredPosts.map((post: any) => (
-            <PostBlock key={post.slug} post={post} />
-          ))}
+        <div className="my-12 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <AnimatePresence mode="wait">
+            {filteredPosts.map((post: any) => (
+              <motion.div
+                key={post.slug}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.2 }}
+              >
+                <PostBlock post={post} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
       </div>
       <Footer />
