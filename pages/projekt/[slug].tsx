@@ -22,7 +22,6 @@ export default function PostDetails({ post }: { post: any }) {
     });
   };
 
-  //console.log(post);
   const [imageToShow, setImageToShow] = useState("");
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
   
