@@ -59,7 +59,6 @@ export const PostBlock = ({ post }: { post: any }) => {
 };
 
 
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = await getPosts(100); // retrieve first 100 posts
 
