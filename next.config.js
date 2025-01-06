@@ -1,10 +1,10 @@
 module.exports = {
     images: {
-        //domains: ['dvorjanski.ee'],
+        //domains: ['veebiteed.ee'],
         remotePatterns: [
             {
               protocol: 'https',
-              hostname: 'dvorjanski.ee'
+              hostname: 'veebiteed.ee'
             },
         ]
     },
